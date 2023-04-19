@@ -29,6 +29,7 @@ public class UserInfoServiceImpl extends ServiceImpl<UserInfoMapper, UserInfo> i
         if (RegexUtils.isPhoneInvalid(phone)) {
             // 2. 不符合返回错误
             return Result.fail("手机号格式错误");
+
         }
         // 3. 符合生成验证码
         String code = RandomUtil.randomNumbers(6);
